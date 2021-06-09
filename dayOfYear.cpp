@@ -34,10 +34,22 @@ private:
 }; // End of Class Definition, remeber to include semi-colon
 
 int main() {
+    // Make an instance of DayofYear
     DayofYear d1;
+
+    // Use and Test DayofYear Methods
     d1.setDate(6, 8, 2021);
+    cout << "Europe Style Date: ";
     d1.printDateEU();
+    cout << "USA Style Date: ";
     d1.printDateUS();
+
+    // Make an instance of DayofYear that is a pointer
+    DayofYear *d2 = new DayofYear;
+    d2->setDate(8, 28, 2000);
+    d2->printDateUS();
+
+    delete d2;
 
     return 0;
 }
